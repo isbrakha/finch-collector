@@ -4,11 +4,12 @@
 <h1>Finch List</h1>
 {% for finch in finches %}
     <div class="card">
+        <a href="{% url 'detail' finch.id %}">
         <div class="card-content">
-        <span class="card-title">{{ finch.name }}</span>
-        <p>Breed: {{ finch.breed }}</p>
-        <p>Description: {{ finch.description }}</p>
-        <p>Age: {{ finch.age }} years old</p>
+            <span class="card-title">{{ finch.name }}</span>
+            <p>Breed: {{ finch.breed }}</p>
+            <p>Description: {{ finch.description }}</p>
+            <p>Favorite Music Genre: {{finch.favorite_music_genre}}</p>
         </div>
     </div>
 {% endfor %}
